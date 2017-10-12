@@ -26,4 +26,10 @@ class FruitCostCalculatorSpec extends FunSuite{
 
     assert(CalculateFruitCost(oranges, offers) == 0.5)
   }
+
+  test("calculate the offer when 4 apples and 1 oranges is bought and total should be 1.45") {
+    val apples4Oranges1 = Apple() :: Apple() :: Orange() :: Apple() :: Apple() :: Nil
+
+    assert(CalculateFruitCost(apples4Oranges1, offers) == 1.45)
+  }
 }
